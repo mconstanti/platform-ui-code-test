@@ -1,0 +1,15 @@
+<mat-card (click)="selected || onAddToSelected()" class="mat-card" *ngIf="provider">
+  <mat-card-header>
+    <mat-card-title class="card-title">{{provider.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="provider-address">{{provider.address}}</p>
+    <p class="provider-phone">{{provider.phone}}</p>
+  </mat-card-content>
+  <mat-card-actions *ngIf="selected">
+    <button mat-icon-button aria-label="Icon with X" (click)="onRemoveFromSelected()" color="warn"
+      class="remove-button">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

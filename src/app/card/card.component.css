@@ -1,0 +1,16 @@
+.mat-card {
+  margin: 10px;
+  min-height: 60px;
+  max-width: 300px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+mat-card button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

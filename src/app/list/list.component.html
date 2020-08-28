@@ -1,4 +1,12 @@
 <div class="list-container">
-  <h2>Providers</h2>
-
+  <section class="providers-list">
+    <h2>Providers</h2>
+    <app-card *ngFor="let provider of unselectedProviders" (addToSelected)="onAddToSelected($event)"
+      [provider]="provider" [selected]="false"></app-card>
+  </section>
+  <section class="providers-list">
+    <h2>Selected</h2>
+    <app-card *ngFor="let provider of selectedProviders" (addToUnselected)="onAddToUnselected($event)"
+      [provider]="provider" [selected]="true"></app-card>
+  </section>
 </div>
